@@ -22,6 +22,11 @@ use \yii\db\ActiveRecord;
  */
 class ConsolidatedReferral extends \yii\db\ActiveRecord
 {
+    public static function primaryKey()
+    {
+            return ['id'];
+    }
+
     /**
      * @inheritdoc
      */

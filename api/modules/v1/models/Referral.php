@@ -91,12 +91,15 @@ class Referral extends ActiveRecord
 	public function beforeSave($insert)
 	{
 	    if (parent::beforeSave($insert)) {
-	    	$this->referralCode = Referral::generateReferralCode($this->lab_id);
-			$this->referralDate = date('Y-m-d',strtotime($this->referralDate));
-			$this->referralTime = time();
-			$this->reportDue = date('Y-m-d',strtotime($this->reportDue));
-			$this->create_time =  date('Y-m-d H:i:s');
-	    	
+
+	    	if ($this->isNewRecord) { 
+     			$this->referralCode = Referral::generateReferralCode($this->lab_id);
+				$this->referralDate = date('Y-m-d',strtotime($this->referralDate));
+				$this->referralTime = time();
+				$this->reportDue = date('Y-m-d',strtotime($this->reportDue));
+				$this->create_time =  date('Y-m-d H:i:s');
+	    	}
+  	
 	        return true;
 	    } else {
 	        return false;

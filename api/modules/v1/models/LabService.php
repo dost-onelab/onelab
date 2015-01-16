@@ -19,6 +19,11 @@ use \yii\db\ActiveRecord;
  */
 class LabService extends \yii\db\ActiveRecord
 {
+    public static function primaryKey()
+    {
+            return ['lab_id'];
+    }
+
     /**
      * @inheritdoc
      */

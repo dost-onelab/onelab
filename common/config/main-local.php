@@ -4,9 +4,10 @@ return [
         'db' => [
             'class' => 'yii\db\Connection',
             
-            'dsn' => 'mysql:host=localhost;dbname=ulimsreferral',
-            'username' => 'adm-0808',
-            'password' => 'DostRegion9',
+            'dsn' => 'mysql:host=localhost;dbname=onelabDB',
+            'username' => 'onelabdb',
+            'password' => 'D057-0n3l4bDB',
+            'charset' => 'utf8',
             
             /*
 			'dsn' => 'mysql:host=10.9.4.224;dbname=onelabDB',

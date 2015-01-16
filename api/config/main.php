@@ -150,6 +150,13 @@ return [
                 ],
                 [
                     'class' => 'yii\rest\UrlRule', 
+                    'controller' => 'v1/referralstatus',
+                    'tokens' => [
+                        '{id}' => '<id:\\w+>'
+                    ]
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule', 
                     'controller' => ['v1/referral'], 
                     'extraPatterns' => [
                         'GET agency' => 'agency'
